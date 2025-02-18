@@ -1,0 +1,66 @@
+1,VECTOR:
+1.size and capaity
+2.push_back and pop_back
+3.emplace_back
+4.at() or []
+5.front and back
+6.erase(perameter 1 to perameter 2)
+7.insert
+8.clear
+9.empty
+10.vec.begin()
+11.vec.end()
+12.vec.rbegin()
+13.vec.rend()
+2,LIST,3.DEQUE:
+1.push_back() and push_front()
+2.emplace_back() and emplace_front()
+3.pop_back() and pop_front()
+4.erase
+5.size
+6.front and back
+7.rbegin() and rend()
+,5.PAIR:
+1.p.first and p.second
+,6.STACK:
+1.push() and emplace()
+2.top()**
+3.size()
+4.empty()
+5.pop()
+6.swap()
+,7.QUEUE:
+1.push() and emplace()
+2.front()**
+3.size()
+4.empty()
+5.pop()
+6.swap()
+,8.PRIORITY QUEUE:
+[priority_queue<int>q]->ascending order
+[priority_queue<int,vector<int>,greater<int>>q] ->descending order
+1.push() and emplace()
+2.top()**
+3.size()
+4.empty()
+5.pop()
+6.swap()
+,9.MAP,multi,unordered:
+,[map<string.int>m;]
+,,[multimap<string.int>m]
+,,,[unordered_map<string.int>m]
+
+[m[key]=value;]
+1.insert and emplace
+2.count
+3.erase{"key"}
+4.find
+5.size/empty
+,10.SET:
+1.insert and emplace
+2.count
+3.erase{"key"}
+4.find
+5.size/empty
+
+
