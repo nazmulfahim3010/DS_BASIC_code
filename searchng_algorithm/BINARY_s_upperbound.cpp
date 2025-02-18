@@ -30,7 +30,7 @@ int main(){
 
     }
     
-    cout<<v[index+1]<<endl;
+    cout<<index+1<<endl;
 
 
 
