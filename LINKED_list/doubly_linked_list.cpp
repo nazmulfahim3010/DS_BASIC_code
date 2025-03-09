@@ -77,6 +77,20 @@ class linked_list{
     int size(){
         return count;
     }
+
+    void push_front(int item){
+        Node*new_node=new Node(item);
+
+        if(head==NULL){
+            push_back(item);
+            return;
+        }
+        
+        new_node->next=head;
+        head=new_node;
+
+
+    }
 };
 int main(){
     linked_list list;
@@ -85,6 +99,8 @@ int main(){
     list.push_back(30);
     list.push_back(50);
     list.push_back(40);
+    list.push_front(242);
+    list.push_front(134);
 
     cout<<list.size()<<endl;
 
