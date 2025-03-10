@@ -39,6 +39,11 @@ class queue{
             cout<<arr[tail]<<endl;
             
         }
+
+
+        int size(){
+            return count;
+        }
 };
 int main(){
     queue q;
@@ -53,7 +58,10 @@ int main(){
 
     q.print();
     cout<<endl;
-    
+
     q.front();
+    cout<<endl;
+
+    cout<<"size:"<<q.size();
 
 }
