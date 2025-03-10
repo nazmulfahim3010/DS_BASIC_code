@@ -82,13 +82,55 @@ class linked_list{
         Node*new_node=new Node(item);
 
         if(head==NULL){
-            push_back(item);
+            push_back(item); 
             return;
         }
-        
+
+        head->prev=new_node;
         new_node->next=head;
         head=new_node;
+        count++;
 
+
+    }
+
+    void deletion(int index){
+
+        int current_index=0;
+        Node*temp=head;
+        Node*temp_prev;
+
+        while(current_index!=index){
+            temp_prev=temp;
+            temp=temp->next;
+            current_index++;
+
+        }
+        temp->next->prev=temp->prev;
+        temp->prev->next=temp->next;
+        count--;
+        free(temp);
+        
+
+
+    }
+    void insertion(int index,int item){
+        int current_index=0;
+        Node*temp=head;
+        Node*new_node=new Node(item);
+
+        while(current_index!=index){
+            temp=temp->next;
+            current_index++;
+            
+
+        }
+        new_node->prev=temp;
+        new_node->next=temp->next;
+        temp->next->prev=new_node;
+        
+
+        count++;
 
     }
 };
@@ -102,8 +144,15 @@ int main(){
     list.push_front(242);
     list.push_front(134);
 
+
+
+    list.deletion(2);
+    list.insertion(2,10);
+
     cout<<list.size()<<endl;
 
     list.print_from_top();
     list.print_from_back();
+
+    
 }
