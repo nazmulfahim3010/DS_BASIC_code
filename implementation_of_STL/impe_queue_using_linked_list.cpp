@@ -35,6 +35,7 @@ class queue{
             }
             temp->next=new_node;
             new_node->prev=temp;
+            count++;
 
         }
 
