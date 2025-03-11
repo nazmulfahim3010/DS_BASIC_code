@@ -69,8 +69,6 @@ class queue{
         int size(){
             return count;
         }
-
-
 };
 int  main(){
     queue q;
