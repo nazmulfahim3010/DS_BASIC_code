@@ -26,6 +26,7 @@ class stackk{
 
             if(head==NULL){
                 head=new_node;
+                count++;
                 return;
             }
             node*temp=head;
@@ -34,6 +35,7 @@ class stackk{
                 temp=temp->next;
             }
             temp->next=new_node;
+            count++;
         }
 
         void print(){
@@ -58,8 +60,23 @@ class stackk{
             }
 
             temp_prev->next=NULL;
+            count--;
 
             free(temp);
+        }
+        void empty(){
+            if(head==NULL){
+                cout<<"empty"<<endl;
+            }
+            else{
+                cout<<"not empty"<<endl;
+            }
+
+        }
+
+        int size(){
+            return count;
+
         }
 
 };
@@ -72,6 +89,10 @@ int main(){
 
     cout<<st.top()<<endl;
     st.pop();
+
+    st.empty();
+
+    cout<<st.size()<<endl;;
 
     st.print();
 
