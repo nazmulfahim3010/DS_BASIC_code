@@ -52,7 +52,7 @@ class queue{
         }
 
         void dequeue(){
-            if(head=nullptr){
+            if(head==NULL){
                 return;
             }
 
@@ -62,6 +62,7 @@ class queue{
             head=temp->next;
             free(temp);
             count--;
+
         }
 
         int size(){
