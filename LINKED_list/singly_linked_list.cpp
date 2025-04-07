@@ -103,6 +103,7 @@ class linked_list{
             Node*up_next=NULL;
             while(count_index!=index){
                 prev=temp;
+                //up_next=temp->next->next;
                 temp=temp->next;
                 up_next=temp->next;
                 count_index++;
