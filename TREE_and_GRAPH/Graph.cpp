@@ -19,7 +19,7 @@ int main(){
     for(int j=0;j<adj_mat[i].size();j++){
         cout<<adj_mat[i][j]<<" ";
     }
-    cout<<endl;
+    cout<<"\n";
    }
 }
 
