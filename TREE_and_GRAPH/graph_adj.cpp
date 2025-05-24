@@ -15,12 +15,14 @@ int main(){
     cout<<"--> answer"<<endl;
 
     for(int f=0;f<i;f++){
+        
         for(int k=0;k<i;k++){
-            if(adj_mat[f][k]==1&&f<k){
-                cout<<f<<" "<<k<<endl;
+            if(adj_mat[f][k]==1){
+                cout<<" "<<k;
             }
              
         }///
+        cout<<endl;
         
     }
 }

@@ -1,68 +1,51 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
+const int m=100;
+int node,edge;
+vector<int>graph[m];
+int found[m]={0};
+int output[m]={0};
 
-struct Node {
-    int data;
-    Node *next;
-    Node *prev;
-
-    Node(int item) {
-        data = item;
-        next = NULL;
-        prev = NULL;
-    }
-};
-
-class linked_list {
-private:
-    Node *head;
-    int count;
-
-public:
-    linked_list() {
-        head = NULL;
-        count = 0;
-    }
-
-    void push_back(int item) {
-        Node *new_node = new Node(item);
-
-        if (head == NULL) {
-            head = new_node;
-            count++;
-            return;
+void bfs(int src){
+    queue<int>look;
+    int node_value;
+    found[src]=1;
+    look.push(src);
+    while(!look.empty()){
+        node_value=look.front();
+        look.pop();
+        cout<<node_value<<" ";
+        for(auto item:graph[node_value]){
+            if(found[item]==0){
+                found[item]=1;
+                look.push(item);
+            }
+    
         }
-
-        Node *temp = head;
-
-        while (temp->next != NULL) {
-            temp = temp->next;
-        }
-
-        temp->next = new_node;
-        new_node->prev = temp;
-        count++;
+        
     }
 
-    void print_from_top() {
-        if (head == NULL) { // Fixed condition
-            cout << "List is empty" << endl;
-            return;
-        }
+    
 
-        Node *temp = head;
-        while (temp != NULL) {
-            cout << temp->data << " ";
-            temp = temp->next;
-        }
-        cout << endl;
+}
+
+int main(){
+    int src;
+    cout<<"enter node ";
+    cin>>node;
+    cout<<"enter edge";
+    cin>>edge;
+    cout<<"source ";
+    cin>>src;
+
+    for(int i=0;i<edge;i++){
+        int a,b;
+        cin>>a>>b;
+        graph[a].push_back(b);
+        graph[b].push_back(a);
     }
-};
+    bfs(src);
+    
 
-int main() {
-    linked_list list;
-    list.push_back(10);
-    list.push_back(20);
-    list.push_back(30);
-    list.print_from_top(); // Output: 10 20 30
+
 }
