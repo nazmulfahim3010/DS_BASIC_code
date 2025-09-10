@@ -25,3 +25,4 @@ int main(){
         cout << array[i] << " ";
     }
 }
+//https://www.w3schools.com/dsa/dsa_algo_selectionsort.php
