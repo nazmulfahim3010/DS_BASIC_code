@@ -14,5 +14,5 @@ for i in range(n-1):
 
 print(*list)
 
-    
+    ##https://www.w3schools.com/dsa/dsa_algo_selectionsort.php
 
